@@ -8,3 +8,5 @@ RUN sed -i 's/^#default-character-set/default-character-set/' /etc/mysql/conf.d/
 	sed -i 's/^#character_set_server/character_set_server/' /etc/mysql/conf.d/mariadb.cnf && \
 	sed -i 's/^#collation_server/collation_server/' /etc/mysql/conf.d/mariadb.cnf
 
+COPY assets/pre-entrypoint.sh /pre-entrypoint.sh
+RUN cat /pre-entrypoint.sh /docker-entrypoint.sh > /temp-entrypoint.sh ; rm /docker-entrypoint.sh ; mv /temp-entrypoint.sh /docker-entrypoint.sh ; chmod +x /docker-entrypoint.sh
