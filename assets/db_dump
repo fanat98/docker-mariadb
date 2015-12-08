@@ -1,0 +1,2 @@
+#!/bin/bash
+/usr/bin/mysqldump --user="${MYSQL_USER}" --password="${MYSQL_PASSWORD}" "${MYSQL_DATABASE}" $1
