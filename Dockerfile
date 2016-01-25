@@ -10,5 +10,6 @@ RUN sed -i 's/^#default-character-set/default-character-set/' /etc/mysql/conf.d/
 
 COPY assets/pre-entrypoint.sh /pre-entrypoint.sh
 COPY assets/db_dump /usr/local/bin/db_dump
+COPY assets/db_import /usr/local/bin/db_import
 
 RUN cat /pre-entrypoint.sh /docker-entrypoint.sh > /temp-entrypoint.sh ; rm /docker-entrypoint.sh ; mv /temp-entrypoint.sh /docker-entrypoint.sh ; chmod +x /docker-entrypoint.sh
