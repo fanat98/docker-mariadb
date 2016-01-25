@@ -1,0 +1,2 @@
+#!/bin/bash
+/usr/bin/nice /usr/bin/mysqldump --user="${MYSQL_USER}" --password="${MYSQL_PASSWORD}" "${MYSQL_DATABASE}" --lock-tables=false --single-transaction $1
