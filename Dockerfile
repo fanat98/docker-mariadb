@@ -1,4 +1,4 @@
-FROM mariadb:10.0
+FROM mariadb:10.2
 MAINTAINER Jonas Renggli <jonas.renggli@swisscom.com>
 
 # set default encoding to utf8
